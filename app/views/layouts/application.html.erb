@@ -15,6 +15,21 @@
   </head>
 
   <body>
+  <nav>
+  <ul>
+  <li><a href ="/user_sign_up">Sign Up</a></li>
+  <li><a href ="/user_sign_out">Sign Out</a></li>
+  <li><a href ="/users">Users</a></li>
+  <li><a href ="/photos">Photos</a></li>
+  <li><%= session.fetch(:user_id)%></li>
+  </ul>
+  </nav>
+  <div style="border: thin green solid; color green">
+<%= notice%>
+</div>
+<div style="border: thin green solid; color red">
+<%= alert%>
+</div>
     <%= yield %>
   </body>
 </html>
